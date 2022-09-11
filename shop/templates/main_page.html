@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load cache %}
+
+{% block content %}
+    {% cache 300 cache_main_page %}
+    <div class="intro" id="start">
+        <div class="container">
+            <div class="intro__inner">
+                <img style="margin: 0 auto; display: flex; width: 22%;" src="{% static 'media/large logo.png' %}">
+                <h1 class="intro__title">{% trans 'Welcome to LeafShop' %}</h1>
+            </div>
+        </div>
+    </div>
+    <a name="about_tea"></a>
+    <div class="about_tea" id="about">
+        <img class="about_tea__leaves" src="{% static 'media/big leaves.png' %}">
+        <img class="about_tea__leaves__bottom" src="{% static 'media/small leaves.png' %}">
+        <div class="container" style="z-index: 100; position: relative; box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.17);">
+            <div class="about_tea__block">
+                <div class="about_tea__text about_tea__text__short" id="about_tea_text_short">
+                    <h3 class="about_tea__title">Some little facts about Tea</h3>
+                    {{ about_tea.about_tea|safe }}
+                </div>
+                <div class="about_tea__text about_tea__text__full" id="about_tea_text_full">
+                    <h3 class="about_tea__title">Some little facts about Tea</h3>
+                    {{ about_tea.about_tea|safe }}
+                    <h3 class="about_tea__title" style="margin-top: 190px;">CAMELIA SINENSIS</h3>
+                    {{ about_tea.camelia|safe }}
+                    <h3 class="about_tea__title" style="margin-top: 190px;">THE THOUSAND NAMES OF TEA</h3>
+                    {{ about_tea.names_of_tea|safe }}
+                    <h3 class="about_tea__title" style="margin-top: 190px;">BLACK TEA: ENERGY AND VITALITY!</h3>
+                    {{ about_tea.black_tea|safe }}
+                    <h3 class="about_tea__title" style="margin-top: 190px;">GREEN TEA: GREAT ANTIOXIDANT POWER!</h3>
+                    {{ about_tea.green_tea|safe }}
+                    <div class="about_tea__pictures">
+                        <img class="about_tea__pictures__item" src="{% static 'media/icon 1.svg' %}">
+                        <img class="about_tea__pictures__item" src="{% static 'media/icon 2.svg' %}">
+                        <img class="about_tea__pictures__item" src="{% static 'media/icon 3.svg' %}">
+                        <img class="about_tea__pictures__item" src="{% static 'media/icon 4.svg' %}">
+                        <img class="about_tea__pictures__item" src="{% static 'media/icon 5.svg' %}">
+                        <img class="about_tea__pictures__item" src="{% static 'media/icon 6.svg' %}">
+                        <img class="about_tea__pictures__item" src="{% static 'media/icon 7.svg' %}">
+                    </div>
+                </div>
+                <div class="about_tea__read_more" id="about_tea_read_more" onclick="readMore();">{% trans 'Read more' %}</div>
+            </div>
+        </div>
+    </div>
+    <div class="products" id="shop">
+        <div class="container">
+            <h1 class="products__title">{% trans 'Our Products' %}</h1>
+            <div style="position: absolute; font-size: 15px; margin-top: 16px; font-weight: 500;">{% trans 'Category' %}:</div>
+            <select id="categories" class="categories_dropdown">
+                <option data-placeholder="true"></option>
+                {% for category in categories %}
+                    <option value="{{ category.pk }}" class="categories_dropdown__option">{{ category.name }}</option>
+                {% endfor %}
+            </select>
+            <script>
+                const slim = new SlimSelect({
+                  select: "#categories",
+                  showSearch: false,
+                  placeholder: 'Choose category',
+                })
+            </script>
+            <hr class="products__separator">
+            <div class="products__list" id='lol'>
+                {% for product in products %}
+                <div class="products__card" data-category="{{ product.category.pk }}">
+                    <img class="products__card__image" src="/media/{{ product.image }}">
+                    <div class="products__card__content">
+                        <div class="space_between_container">
+                            <h2 class="products__card__title">{{ product.name }}</h2>
+                            <span class="products__card__price">{{ product.price }} KGS</span>
+                        </div>
+                        <div class="products__card__description">{{ product.description }}</div>
+                        <div class="products__card__buttons">
+                            <button class="btn" onclick="addProduct('{% url 'shop:add_product_to_cart' product_id=product.pk %}')">Add to Cart</button>
+                            <a class="btn" href="{% url 'shop:add_product_to_cart' product_id=product.pk %}">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <script>
+        async function addProduct(url) {
+            const Http = new XMLHttpRequest();
+            Http.open("GET", url);
+            Http.send();
+            setTimeout("setCartValues()", 10);
+        }
+
+        async function setCartValues() {
+            let cart_json = await getCart();
+
+            document.getElementById("header_cart_count").innerHTML = cart_json.products_quantity;
+            document.getElementById("header_cart_count_mobile").innerHTML = cart_json.products_quantity;
+            document.getElementById("header_cart_sum").innerHTML = cart_json.sum + ' KGS';
+
+            fadeAnimation("header_cart_block")
+            fadeAnimation("header_cart_count_mobile")
+        }
+
+        async function getCart() {
+            let response = await fetch('{% url 'shop:cart_detail' %}');
+            let data = await response.json();
+            data = JSON.stringify(data);
+            data = JSON.parse(data);
+            return data;
+        }
+
+        async function fadeAnimation(id) {
+            document.getElementById(id).classList.remove("run-animation");
+            void document.getElementById(id).offsetWidth;
+            document.getElementById(id).classList.add("run-animation");
+        }
+    </script>
+    <a name="our_cafe"></a>
+    <footer class="footer" id="our_cafe">
+        <div class="container">
+            <div class="footer__logo">
+                <img class="footer__logo__img" src="{% static 'media/leaf_cafe_logo.png' %}">
+                <h1 class="footer__logo__title">Our Cafe</h1>
+            </div>
+            <div class="footer__text">
+                <p>We are happy to invite you to visit our “Leaf Tea Cafe”, where we serve variety of tea infused drinks, like coffee, tea and desserts! Freshly baked pastry, brownies, cookies are awaiting for you.</p>
+                <p>For further information visit our social media pages, or use contact information down below.</p>
+            </div>
+            <div class="footer__gallery">
+                <div class="footer__gallery__item">
+                    <img class="footer__gallery__item__img" src="{% static 'media/insta1.jpg' %}">
+                    <div class="footer__gallery__item__span">Telegram: <a href="">@domodom</a></div>
+                </div>
+                <div class="footer__gallery__item">
+                    <img class="footer__gallery__item__img" src="{% static 'media/insta2.jpg' %}">
+                    <div class="footer__gallery__item__span">Telegram: <a href="">@domodom</a></div>
+                </div>
+                <div class="footer__gallery__item">
+                    <img class="footer__gallery__item__img" src="{% static 'media/insta3.jpg' %}">
+                    <div class="footer__gallery__item__span">Telegram: <a href="">@domodom</a></div>
+                </div>
+            </div>
+            <a name="contact_us"></a>
+            <div class="footer__navigation" id="contact">
+                <div class="footer__navigation__list">
+                    <div class="footer__navigation__list__item footer__navigation__list__item__main"><a href="{% url 'shop:shop_policy' %}">Shop Policy</a></div>
+                    <div class="footer__navigation__list__item"><a href="{% url 'shop:shop_policy' %}">Terms of Service</a></div>
+                    <div class="footer__navigation__list__item"><a href="{% url 'shop:shop_policy' %}#shipping_policy">Shipping Policy</a></div>
+                    <div class="footer__navigation__list__item"><a href="{% url 'shop:shop_policy' %}#return_policy">Return & Refund Policy</a></div>
+                    <div class="footer__navigation__list__item"><a href="{% url 'shop:shop_policy' %}#privacy_policy">Privacy policy</a></div>
+                </div>
+                <div class="footer__navigation__contact_us">
+                    <div class="footer__navigation__contact_us">
+                        <span style="display: block;">Add our Official Telegram Account: @domodom or by scanning QR_code down below</span>
+                        <img class="footer__navigation__contact_us__qr_code" src="{% static 'media/payment_qr.png' %}">
+                        <div class="footer__navigation__contact_us__logos">
+                            <a class="footer__navigation__contact_us__logos__item" href=""><img src="{% static 'media/icon_fb.svg' %}"></a>
+                            <a class="footer__navigation__contact_us__logos__item" href=""><img src="{% static 'media/icon_inst.svg' %}"></a>
+                            <a class="footer__navigation__contact_us__logos__item" href="mailto:viablochko@gmail.com"><img src="{% static 'media/icon_email.svg' %}"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endcache %}
+{% endblock %}

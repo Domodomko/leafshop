@@ -1,0 +1,81 @@
+{% load static %}
+{% load i18n %}
+
+<header class="header">
+    <div class="header__top">
+        <div class="header__wrapper">
+            <div class="header__left">
+                <a href="{% url 'shop:payment_submission' %}" class="header__item">payment submission</a>
+            </div>
+            {% if not is_main_page %}
+                <a href="{% url 'shop:main' %}" class="header__logo">
+                    <img src="{% static 'media/shop_logo.svg' %}" alt="Site Logo">
+                </a>
+            {% endif %}
+            <div class="header__right">
+                <div id="header_cart_block" style="display: flex;">
+                    <a type="button" name="" class="cart_button" href="{% url 'shop:cart' %}">
+                        <img src="{% static 'media/cart.svg' %}" alt="Cart Logo">
+                    </a>
+                    <div class="header__cart__count" id="header_cart_count">{{ cart.all_products_quantity}}</div>
+                    <div class="header__cart__dot">•</div>
+                    <div class="header__cart__sum" id="header_cart_sum">{{ cart.all_products_sum}} KGS</div>
+                </div>
+{#                <div class="header__line_separator">|</div>#}
+{#                <div class="header__languages" style="opacity: 20%;">#}
+{#                    <span style="text-decoration: underline;">ENG</span>#}
+{#                    <span>|</span>#}
+{#                    <span>RU</span>#}
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+    {% if is_main_page %}
+    <div class="header__bottom">
+        <div class="header__wrapper">
+            <div class="header__left">
+                <a href="" data-scroll="#about" class="header__item">about tea</a>
+                <a href="" data-scroll="#shop" class="header__item">shop</a>
+            </div>
+            <a href="{% url 'shop:main' %}" class="header__logo">
+                <img src="{% static 'media/shop_logo.svg' %}" alt="Site Logo">
+            </a>
+            <div class="header__right header__right_bottom">
+                <a href="" data-scroll="#our_cafe" class="header__item header__item__cafe">our cafe</a>
+                <a href="" data-scroll="#contact" class="header__item header__item__contact">contact</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</header>
+
+
+<header class="header_mobile" id="header_mobile" style="font-weight: 300;">
+    <div class="header__inner">
+        <a href="{% url 'shop:main' %}" class="header_mobile__logo">
+            <img style="width: inherit; height: auto;" src="{% static 'media/shop_logo.svg' %}" alt="Site Logo">
+        </a>
+        <nav class="nav" id="nav">
+            <a class="nav__link" href="{% url 'shop:payment_submission' %}">{% translate "PAYMENT CONFIRMATION" %}</a>
+            <a class="nav__link" href="{% url 'shop:about_tea' %}">{% translate "ABOUT TEA" %}</a>
+<!--            <a class="nav__link" {% if main_page %} data-scroll="#about" {% else %} href="{% url 'shop:main' %}#about_tea" {% endif %}>{% translate "ABOUT TEA" %}</a>-->
+            <a class="nav__link" href="{% url 'shop:shop_policy' %}">{% translate "SHOP POLICY" %}</a>
+            <a class="nav__link" {% if main_page %} data-scroll="#contact" {% else %} href="{% url 'shop:main' %}#contact_us" {% endif %}>{% translate "CONTACT US" %}</a>
+            <a class="nav__link" href="">{% translate "OUR CAFE" %}</a>
+            <div class="nav__link nav__link__language" style="opacity: 20%;">
+            {% if LANGUAGE_CODE == "en" %}
+                <a style="color: white; text-decoration: underline" class="language__link">eng</a> | <a class="language__link">th</a>
+            {% else %}
+                <a class="language__link">eng</a> | <a style="color: white; text-decoration: underline" class="language__link">th</a>
+            {% endif %}
+            </div>
+        </nav>
+        <a type="button" name="" class="cart_button cart_button_mobile" href="{% url 'shop:cart' %}">
+            <img src="{% static 'media/cart.svg' %}" alt="Cart Logo">
+            <div class="header__cart__count__mobile" id="header_cart_count_mobile">{% if cart.all_products_quantity > 0 %}{{ cart.all_products_quantity }}{% endif %}</div>
+        </a>
+        <button class="nav-toggle" type="button" id="nav_toggle">
+            <span class="nav-toggle__item">{% translate "Menu" %}</span>
+        </button>
+    </div>
+</header>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <div class="gradient_background">
+        <div class="payment_submission__container">
+            <div class="payment_submission__container__inside">
+                <div style="margin-bottom: 35px;">Please make a payment to our Bank Account at ATM or using online banking application.</div>
+                <div style="margin-bottom: 35px;">
+                    Bank Name: {{ bank_props.bank_name }}<br>
+                    Account Number: {{ bank_props.account_number }}<br>
+                    Cardholder Name: {{ bank_props.cardholder_name }}<br>
+                </div>
+                <div class="payment_submission__65_percent" style="margin-bottom: 35px;">Scan QR-code below to proceed with your payment.</div>
+                <img class="payment_submission__qr_code" src="{% static 'media/payment_qr.png' %}">
+                <div class="payment_submission__65_percent" style="margin-bottom: 35px;">After you completed a payment, please submit it to our Line Official Account alongside with your Order Number</div>
+                <div class="payment_submission__65_percent">Scan QR-code or search for @leaf_shop in Line application.</div>
+                <img class="payment_submission__qr_code" src="{% static 'media/payment_qr.png' %}">
+            </div>
+        </div>
+        <div class="wide_footer">
+            {% include 'blocks/simple_footer.html' %}
+        </div>
+    </div>
+{% endblock %}

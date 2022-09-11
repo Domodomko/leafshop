@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div class="gradient_background">
+      <div class="container">
+        <div class="container_separator">
+            <div class="order_form">
+                <div class="confirmation__title">
+                  <div style="display: flex; align-items: center;">
+                    <img src="{% static 'media/leaf_cafe_logo.png' %}" style="width: 90px; height: 90px;">
+                    <div style="margin-left: 33px;">
+                      <div class="order_number_text">Order #{{ order.pk }}</div>
+                      <div class="thank_you_text">Thank you, {{ order.shipping_first_name }}! </div>
+                    </div>
+                  </div>
+                </div>
+              <div class="order_confirmation__info">
+                <div class="order_confirmation__info_text_block">
+                  <h3 class="order_confirmed_text">{% trans 'Your Order is confirmed' %}</h3>
+                  <div class="order_confirmation__info_text">{% trans 'Please make a payment to our Bank Account at ATM or using online banking application.' %}</div>
+                  <div class="order_confirmation__info_text">
+                    <div>{% trans 'Bank name:' %} {{ bank_props.bank_name }}</div>
+                    <div>{% trans 'Account Number:' %} {{ bank_props.account_number }}</div>
+                    <div>{% trans 'Cardholder Name:' %} {{ bank_props.cardholder_name }}</div>
+                  </div>
+                  <div class="order_confirmation__info_text">{% trans 'Scan QR-code or search for @leaf_shop in Line application.' %}</div>
+                  <img class="order_confirmation__qr order_confirmation__qr__payment" src="{% static 'media/payment_qr.png' %}">
+                  <div class="order_confirmation__info_text" style="margin-top: 45px;">{% trans 'After you completed a payment, please submit it to our Line Official Account alongside with your Order Number ' %}</div>
+                  <div class="order_confirmation__info_text">{% trans 'Scan QR-code or search for @leaf_shop in Line application.' %}</div>
+                  <img class="order_confirmation__qr" src="{% static 'media/payment_qr.png' %}">
+                </div>
+              </div>
+
+              <div class="tight_footer">
+                  {% include 'blocks/simple_footer.html' %}
+              </div>
+            </div>
+            <div class="order_cart">
+                <div class="order_cart__inside">
+                    {% for product in order_cart.products_to_cart.all %}
+                        <div class="order_cart__item">
+                            <div style="position: relative;">
+                                <img class="order_cart__item__img" src="/media/{{ product.product.image }}">
+                                {% if product.quantity > 1 %}
+                                    <div class="count_round" {% if product.quantity > 9 %} style="padding-left: 9px;" {% else %} style="padding-left: 12.5px;" {% endif %}>{{ product.quantity }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="order_cart__item__content">
+                                <div class="order_cart__item__name">{{ product.product.name }}</div>
+                                <div class="order_cart__item__price">{{ product.product.price }} KGS</div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <hr class="payment_form__hr" style="margin-bottom: 31px;">
+                    <div style="width: 100%; display: flex; justify-content: space-between;">
+                        <div>{% trans 'Subtotal' %}</div>
+                        <div style="font-weight: 600;">{{ order_cart.all_products_sum }} KGS</div>
+                    </div>
+                    <div style="margin: 29px 0;">{% trans 'Shipping' %}
+                        <div class="hint">
+                            <img src="{% static 'media/hint.svg' %}">
+                            <div class="hint__label hint__label__shipping">
+                                Shipping costs will vary between 100-150 kgs, depending on your address and order quantity, and you will have to pay cash on delivery for it.<br>
+                                All orders will be shipped within 24 hours.<br>
+                                If the payment has been made before 10.00AM, your order will be ship on that day during our business hours. If the payment is paid after 10.00AM, your order will be shipped on the next day.
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="payment_form__hr" style="margin-bottom: 31px;">
+                    <div style="width: 100%; display: flex; justify-content: space-between; font-size: 24px;">
+                        <div>{% trans 'Total' %}</div>
+                        <div style="font-weight: 600;">{{ order_cart.all_products_sum }} KGS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

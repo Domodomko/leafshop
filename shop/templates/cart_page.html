@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <div class="gradient_background">
+      <div class="container">
+        <div class="cart__title">
+          <h1 class="cart__title__h1">Ready to check out?</h1>
+          <h2 class="cart__title__h2" id="h2_all_products_sum">total*: {{ cart.all_products_sum}} KGS</h2>
+        </div>
+        <div class="cart__table">
+          <div class="cart__table__header">
+            <div style="margin-top: 10px;">Item</div>
+            <div class="cart__table__header__headers">
+              <div>Price</div>
+              <div>Quantity</div>
+              <div>Total</div>
+            </div>
+          </div>
+
+          <hr class="cart__table__hr">
+
+          <ul class="cart__table__list">
+            {% for product_to_cart in cart.products_to_cart.all %}
+              {% if product_to_cart.quantity > 0 %}
+                <li class="cart__table__list__item" id="cart__table__list__item_{{ product_to_cart.pk }}">
+                  <img class="cart__table__list__item__img" src="/media/{{ product_to_cart.product.image }}">
+                  <div class="cart__table__list__item__title">{{ product_to_cart.product.name }}</div>
+                  <div class="cart__table__list__item__items_set">
+                    <div class="cart__table__price">{{ product_to_cart.product.price }} KGS</div>
+                    <div class="cart__table__count">
+                      <button class="cart__table__count__button" onclick="addProduct('{% url 'shop:remove_product_from_cart' product_id=product_to_cart.product.pk %}', '{% url 'shop:product_to_cart_detail' product_to_cart_id=product_to_cart.pk %}')">
+                        <img class="cart__table__count__button__img" src="{% static 'media/minus.png' %}">
+                      </button>
+                      <input class="cart__table__count__input" id="cart__table__count__input_{{ product_to_cart.pk }}" value="{{ product_to_cart.quantity }}">
+                      <button class="cart__table__count__button" onclick="addProduct('{% url 'shop:add_product_to_cart' product_id=product_to_cart.product.pk %}', '{% url 'shop:product_to_cart_detail' product_to_cart_id=product_to_cart.pk %}')">
+                        <img class="cart__table__count__button__img" src="{% static 'media/plus.png' %}">
+                      </button>
+                    </div>
+                    <div class="product_to_cart__sum" id="product_to_cart_sum_id_{{ product_to_cart.pk }}">{{ product_to_cart.products_sum }} KGS</div>
+                  </div>
+                </li>
+                <hr class="cart__table__hr" id="cart__table__hr_{{ product_to_cart.pk }}">
+              {% endif %}
+            {% endfor %}
+          </ul>
+          <script>
+            async function addProduct(url, product_url) {
+                const Http = new XMLHttpRequest();
+                Http.open("GET", url);
+                Http.send();
+                setTimeout(`setCartPageValues("${product_url}")`, 10);
+            }
+
+            async function setCartPageValues(product_url) {
+                let cart_json = await getCart();
+                let product_to_cart_json = await getProductToCart(product_url);
+                document.getElementById("header_cart_count").innerHTML = cart_json.products_quantity;
+                document.getElementById("header_cart_count_mobile").innerHTML = cart_json.products_quantity;
+                document.getElementById("header_cart_sum").innerHTML = cart_json.sum + ' KGS';
+                document.getElementById("h2_all_products_sum").innerHTML = 'total*: ' + cart_json.sum + ' KGS';
+                document.getElementById("bottom_all_products_sum").innerHTML = 'total* (not including shipping fees): ' + cart_json.sum + ' KGS';
+                document.getElementById("product_to_cart_sum_id_" + product_to_cart_json.id).innerHTML = product_to_cart_json.sum + ' KGS';
+                document.getElementById("cart__table__count__input_" + product_to_cart_json.id).value = product_to_cart_json.quantity;
+
+                if (product_to_cart_json.quantity == 0) {
+                  document.getElementById("cart__table__list__item_" + product_to_cart_json.id).style.display = 'None';
+                  document.getElementById("cart__table__hr_" + product_to_cart_json.id).style.display = 'None';
+                }
+                else {
+                  document.getElementById("product_to_cart_sum_id_" + product_to_cart_json.id).innerHTML = product_to_cart_json.sum + ' KGS';
+                  document.getElementById("cart__table__count__input_" + product_to_cart_json.id).value = product_to_cart_json.quantity;
+                }
+
+                fadeAnimation("header_cart_block");
+                fadeAnimation("header_cart_count_mobile");
+                fadeAnimation("h2_all_products_sum");
+                fadeAnimation("bottom_all_products_sum");
+            }
+
+            async function getCart() {
+                let response = await fetch('{% url 'shop:cart_detail' %}');
+                let data = await response.json();
+                data = JSON.stringify(data);
+                data = JSON.parse(data);
+                return data;
+            }
+
+            async function getProductToCart(product_url) {
+                let response = await fetch(product_url);
+                let data = await response.json();
+                data = JSON.stringify(data);
+                data = JSON.parse(data);
+                return data;
+            }
+
+            async function fadeAnimation(id) {
+                document.getElementById(id).classList.remove("run-animation");
+                void document.getElementById(id).offsetWidth;
+                document.getElementById(id).classList.add("run-animation");
+            }
+          </script>
+          <div class="cart__table__footer">
+            <div id="bottom_all_products_sum">total* (not including shipping fees): {{ cart.all_products_sum}} KGS</div>
+            <a class="btn btn__cart" href="{% url 'shop:order_information' %}">Check Out</a>
+          </div>
+        </div>
+      </div>
+      <div class="wide_footer wide_footer__cart">
+          {% include 'blocks/simple_footer.html' %}
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <div class="gradient_background">
+        <div class="container">
+            <div class="shop_policy__text">
+                <h3 class="shop_policy_title">Terms of Service</h3>
+                {{ shop_policy.term_of_service|safe }}
+                <a name="shipping_policy"></a>
+                <h3 class="shop_policy_title">Shipping Policy</h3>
+                {{ shop_policy.shipping_policy|safe }}
+                <a name="return_policy"></a>
+                <h3 class="shop_policy_title">Return Policy</h3>
+                {{ shop_policy.return_policy|safe }}
+                <a name="privacy_policy"></a>
+                <h3 class="shop_policy_title">Privacy Policy</h3>
+                {{ shop_policy.privacy_policy|safe }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
