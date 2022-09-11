@@ -100,6 +100,7 @@
             <div class="order_cart">
                 <div class="order_cart__inside">
                     {% for product in cart.products_to_cart.all %}
+                        {% if product.quantity > 0 %}
                         <div class="order_cart__item">
                             <div style="position: relative;">
                                 <img class="order_cart__item__img" src="/media/{{ product.product.image }}">
@@ -112,6 +113,7 @@
                                 <div class="order_cart__item__price">{{ product.product.price }} KGS</div>
                             </div>
                         </div>
+                        {% endif %}
                     {% endfor %}
                     <hr class="payment_form__hr" style="margin-bottom: 31px;">
                     <div style="width: 100%; display: flex; justify-content: space-between;">

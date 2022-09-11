@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 {% load i18n %}
 {% load static %}
-{% load cache %}
 
 {% block content %}
-    {% cache 300 cache_main_page %}
     <div class="intro" id="start">
         <div class="container">
             <div class="intro__inner">
@@ -167,5 +165,4 @@
             </div>
         </div>
     </footer>
-    {% endcache %}
 {% endblock %}

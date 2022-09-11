@@ -136,7 +136,9 @@ GitHub.sublime-settings
 !.vscode/extensions.json
 .history
 
+# Project files #
 media/
 static/admin/
 static/ckeditor/
 static/modeltranslation/
+static/shop/

@@ -368,8 +368,8 @@ a.button {
 }
 
 .products__card__image {
-    height: 475px;
-    width: 475px;
+    height: 474px;
+    width: 474px;
 }
 
 .products__card__content {
@@ -403,6 +403,9 @@ a.button {
     margin-top: 50px;
     max-width: 100%;
     text-align: justify;
+    max-height: 131px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .space_between_container {
@@ -1436,9 +1439,9 @@ a.button {
         font-size: 20px;
     }
     .products__card__image {
-        min-height: 400px;
+        min-height: 399px;
         min-width: 400px;
-        max-height: 400px;
+        max-height: 399px;
         max-width: 400px;
     }
 
