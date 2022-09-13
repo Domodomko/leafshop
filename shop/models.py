@@ -39,7 +39,7 @@ class Cart(models.Model):
         sum = 0
         for product_to_cart in self.products_to_cart.all():
             sum += product_to_cart.products_sum()
-        return sum
+        return float(sum)
 
     def all_products_quantity(self):
         return sum(product_to_cart.quantity for product_to_cart in self.products_to_cart.all())

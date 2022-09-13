@@ -97,7 +97,7 @@
 
             document.getElementById("header_cart_count").innerHTML = cart_json.products_quantity;
             document.getElementById("header_cart_count_mobile").innerHTML = cart_json.products_quantity;
-            document.getElementById("header_cart_sum").innerHTML = cart_json.sum + ' KGS';
+            document.getElementById("header_cart_sum").innerHTML = cart_json.sum.toFixed(1) + ' KGS';
 
             fadeAnimation("header_cart_block")
             fadeAnimation("header_cart_count_mobile")
