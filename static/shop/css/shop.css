@@ -1041,6 +1041,7 @@ a.button {
 .payment__bank__qr {
     margin: 27px auto;
     display: block;
+    width: 25%;
 }
 
 .order_confirmation__info {

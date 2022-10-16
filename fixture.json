@@ -1,0 +1,1002 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2022-09-11T12:34:49.721",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "AboutTeaContent object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2022-09-11T12:35:22.630",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "AboutTeaContent object (1)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Green tea [en]\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2022-09-11T12:35:46.254",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "BankProps object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2022-09-11T12:36:06.424",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Green Tea",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2022-09-11T12:36:21.118",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Black Tea",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2022-09-11T12:36:36.501",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "Mixed",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2022-09-11T12:39:58.299",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Oolong Tea",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2022-09-11T12:40:22.848",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Oolong Tea",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2022-09-11T20:26:23.992",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "2",
+      "object_repr": "Thai Rainbow Tea",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2022-09-11T20:40:56.805",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "Hibiscus Heaven",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2022-09-13T08:51:02.615",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "ShopPolicy object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add about tea content",
+      "content_type": 7,
+      "codename": "add_aboutteacontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change about tea content",
+      "content_type": 7,
+      "codename": "change_aboutteacontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete about tea content",
+      "content_type": 7,
+      "codename": "delete_aboutteacontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view about tea content",
+      "content_type": 7,
+      "codename": "view_aboutteacontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add bank props",
+      "content_type": 8,
+      "codename": "add_bankprops"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change bank props",
+      "content_type": 8,
+      "codename": "change_bankprops"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete bank props",
+      "content_type": 8,
+      "codename": "delete_bankprops"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view bank props",
+      "content_type": 8,
+      "codename": "view_bankprops"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add cart",
+      "content_type": 9,
+      "codename": "add_cart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change cart",
+      "content_type": 9,
+      "codename": "change_cart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete cart",
+      "content_type": 9,
+      "codename": "delete_cart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view cart",
+      "content_type": 9,
+      "codename": "view_cart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add category",
+      "content_type": 10,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change category",
+      "content_type": 10,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete category",
+      "content_type": 10,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view category",
+      "content_type": 10,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add product",
+      "content_type": 11,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change product",
+      "content_type": 11,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete product",
+      "content_type": 11,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view product",
+      "content_type": 11,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add shop policy",
+      "content_type": 12,
+      "codename": "add_shoppolicy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change shop policy",
+      "content_type": 12,
+      "codename": "change_shoppolicy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete shop policy",
+      "content_type": 12,
+      "codename": "delete_shoppolicy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view shop policy",
+      "content_type": 12,
+      "codename": "view_shoppolicy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add product to cart",
+      "content_type": 13,
+      "codename": "add_producttocart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change product to cart",
+      "content_type": 13,
+      "codename": "change_producttocart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete product to cart",
+      "content_type": 13,
+      "codename": "delete_producttocart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view product to cart",
+      "content_type": 13,
+      "codename": "view_producttocart"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add order",
+      "content_type": 14,
+      "codename": "add_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change order",
+      "content_type": 14,
+      "codename": "change_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete order",
+      "content_type": 14,
+      "codename": "delete_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view order",
+      "content_type": 14,
+      "codename": "view_order"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$rOrQAUGGv2NDlPGavKiCW7$uG3q2/SbSfdLJgSZPyOKpqQpR/VfZgKLfaKvm5b9+Yg=",
+      "last_login": "2022-09-23T09:10:20.864",
+      "is_superuser": true,
+      "username": "domodom",
+      "first_name": "",
+      "last_name": "",
+      "email": "viablochko@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-09-11T12:30:51.879",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "shop",
+      "model": "aboutteacontent"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "shop",
+      "model": "bankprops"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "shop",
+      "model": "cart"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "shop",
+      "model": "category"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "shop",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "shop",
+      "model": "shoppolicy"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "shop",
+      "model": "producttocart"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "shop",
+      "model": "order"
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 1,
+    "fields": {
+      "name": "Green Tea"
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 2,
+    "fields": {
+      "name": "Black Tea"
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 3,
+    "fields": {
+      "name": "Mixed"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+      "name": "Oolong Tea",
+      "description": "Oolong tea is a traditional Chinese tea.\r\n\r\nIt’s made from the leaves of the Camellia sinensis plant, the same plant used to make green tea and black tea. The difference is in how the tea is processed.",
+      "image": "image_8.png",
+      "price": 100.0,
+      "category": 1
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+      "name": "Thai Rainbow Tea",
+      "description": "FOREST FRIENDLY TEA is an eco-sustainable project born in harmony with nature and the power of the earth. \r\n\r\nA blend of wild tea from northern Thailand, with the scents and flavors of the tropics. Its large, dark leaves give this tea an enveloping and lingering aroma.",
+      "image": "72012_ThaiRainbowTea_1000X1000_l.jpg",
+      "price": 600.0,
+      "category": 2
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+      "name": "Hibiscus Heaven",
+      "description": "Starwest Botanicals Hibiscus Heaven Tea Organic, Caffeine-Free Origin: United States. Ingredients: Organic hibiscus, organic rosehips, organic orange peel, organic lemongrass, organic lemon peel and organic lemon oil. Organic Hibiscus Heaven Tea: Organic hibiscus, rosehips and citrus. This tea is high in Vitamin C. Our best selling herbal tea- great hot or cold.",
+      "image": "9a84b17c47b42d5522ee0e70ba565ce2.webp",
+      "price": 300.0,
+      "category": 3
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 1,
+    "fields": {
+      "is_active": true
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 2,
+    "fields": {
+      "is_active": false
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 3,
+    "fields": {
+      "is_active": true
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 4,
+    "fields": {
+      "is_active": true
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 5,
+    "fields": {
+      "is_active": true
+    }
+  },
+  {
+    "model": "shop.producttocart",
+    "pk": 3,
+    "fields": {
+      "product": 2,
+      "quantity": 0,
+      "cart": 1
+    }
+  },
+  {
+    "model": "shop.producttocart",
+    "pk": 5,
+    "fields": {
+      "product": 1,
+      "quantity": 0,
+      "cart": 1
+    }
+  },
+  {
+    "model": "shop.producttocart",
+    "pk": 6,
+    "fields": {
+      "product": 1,
+      "quantity": 11,
+      "cart": 2
+    }
+  },
+  {
+    "model": "shop.producttocart",
+    "pk": 7,
+    "fields": {
+      "product": 2,
+      "quantity": 3,
+      "cart": 2
+    }
+  },
+  {
+    "model": "shop.producttocart",
+    "pk": 8,
+    "fields": {
+      "product": 3,
+      "quantity": 0,
+      "cart": 2
+    }
+  },
+  {
+    "model": "shop.producttocart",
+    "pk": 9,
+    "fields": {
+      "product": 1,
+      "quantity": 1,
+      "cart": 4
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 1,
+    "fields": {
+      "email": "viablochko@gmail.com",
+      "cart": 2,
+      "created_at": "2022-09-13T10:19:04.918",
+      "is_active": false,
+      "is_paid": false,
+      "shipping_first_name": "Sergei",
+      "shipping_last_name": "Shinn",
+      "shipping_address": "mdstr. 3, 21 house, 40 appartments",
+      "shipping_city": "Bishkek",
+      "shipping_province": "Chui",
+      "shipping_postal": "32131",
+      "shipping_phone": "+996771775888",
+      "billing_first_name": "Sergei",
+      "billing_last_name": "Shinn",
+      "billing_address": "mdstr. 3, 21 house, 40 appartments",
+      "billing_city": "Bishkek",
+      "billing_province": "Chui",
+      "billing_postal": "32131",
+      "billing_phone": "+996771775888"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 2,
+    "fields": {
+      "email": "viablochko@gmail.com",
+      "cart": null,
+      "created_at": "2022-09-23T09:07:18.937",
+      "is_active": true,
+      "is_paid": false,
+      "shipping_first_name": "Sergei",
+      "shipping_last_name": "Shinn",
+      "shipping_address": "mdstr. 3, 21 house, 40 appartments",
+      "shipping_city": "Bishkek",
+      "shipping_province": "Issykkul",
+      "shipping_postal": "32131",
+      "shipping_phone": "+996771775888",
+      "billing_first_name": "",
+      "billing_last_name": "",
+      "billing_address": "",
+      "billing_city": "",
+      "billing_province": "",
+      "billing_postal": "",
+      "billing_phone": ""
+    }
+  },
+  {
+    "model": "shop.aboutteacontent",
+    "pk": 1,
+    "fields": {
+      "about_tea": "<p>Tea (THEA SINENSIS o CAMELIA SINENSIS) is an evergreen plant of the Camellia family. Botanists recognize two very similar varieties: Chinese, Assam, and the Cambodian subspecies, all used for commercial production.<br />\r\n<br />\r\nCamellia Sinensis, in its Chinese variety, can reach a height of 3 to 4.5 meters and is widespread throughout China, Tibet and Japan. It tolerates low temperatures, producing leaves of about 6 cm in length and can live up to 100 years.<br />\r\n<br />\r\nCamellia Assamica is more a tree than a bush and can reach a height of 13 meters, with leaves of about 15 cm in length. This variety thrives in tropical climates and has a productive life of about 40 years. The subspecies most used for the production of hybrids (crosses between different varieties) is the Cambodian Camellia (Camellia assamica, lasiocalix subspecies), which can also grow to a height of up to 4.5 metres.</p>",
+      "camelia": "<p>The tea plant, in plantations, is usually pruned to maintain its shrub form, with a greater ability to constantly produce new buds.<br />\r\n<br />\r\nFrom the outset the &quot;&quot;pruning&quot;&quot; is designed to give the top of the plant a flat shape: this will make it easier to grow new buds, which represent one of the fundamental aspects of the various harvests. Tea is like a fine wine or a good oil, i.e. the taste and quality of the final product depends on many factors, such as climate, soil, altitude, weather conditions, the method of harvesting and handling, mixing, packaging, transport and storage.<br />\r\n<br />\r\nTea plantations are usually called gardens, especially in India, in the areas of Darjeeling and Assam, where there is a very important distinction that determines the value of the tea based on the garden of origin.</p>",
+      "names_of_tea": "<p>Before the English word &ldquo;tea&rdquo; came about, the leaves had a variety of different names: tcha, cha, tay and tee. The English name does not come from the Mandarin Chinese, Tcha, but from the Amoy dialect, te, assimilated during the first contacts between the Chinese and Dutch traders in the port of Amoy in the Fujian province. That name became &ldquo;thee&rdquo; in Dutch, and the Dutch having been the first to import tea to Europe, it then became &ldquo;tee&rdquo; in German.<br />\r\n<br />\r\nIn Spanish, Italian, Danish, Norwegian, Swedish and Hungarian it is written &ldquo;t&eacute;&rdquo;, in English &ldquo;tea&rdquo;, in French &ldquo;th&eacute;&rdquo;, in Finnish &ldquo;tee&rdquo;, in Latvian &ldquo;teja&rdquo;, in Korean &ldquo;ta&rdquo;, in Tamil &ldquo;tey&rdquo;, in Sinhala &ldquo;thay&rdquo; and in scientific language &ldquo;thea&rdquo;.<br />\r\n<br />\r\nThe Mandarin &ldquo;cha&rdquo; became &ldquo;ch&#39;a&rdquo; in Cantonese and was translated into Portuguese as &ldquo;cha&rdquo; (at the time of Portuguese trade with the Cantonese-speaking city of Macao) and then into Persian, Japanese and Hindi, becoming &ldquo;shai&rdquo; in Arabic, &ldquo;ja&rdquo; in Tibetan, &ldquo;chay&rdquo; in Turkish and &ldquo;chai&rdquo; in Russian.</p>",
+      "black_tea": "<p>To produce this variety of tea, fresh Camelia Sinensis leaves go through a process of oxidation and transform from their original green colour to a dark brown colour, giving their aroma a more complex quality.<br />\r\n<br />\r\nThe end product has a chestnut brown or amber colour and features a strong body and flavour profile. Black tea&rsquo;s oxidation promotes the release of caffeine when infused, making it the most stimulating variety.<br />\r\n<br />\r\nProperties of Black Tea:</p>\r\n\r\n<ul>\r\n\t<li>Stimulates the mind</li>\r\n\t<li>Reduces blood cholesterol</li>\r\n\t<li>Helps reduce the risk of cardiovascular diseases</li>\r\n\t<li>Strengthens the immune system</li>\r\n\t<li>High fluoride content, which prevents cavities and strengthens tooth enamel</li>\r\n\t<li>Strengthens bones</li>\r\n\t<li>Antioxidant: fights the effects of free radicals</li>\r\n</ul>",
+      "green_tea": "<p>Oxidation of the tea leaves is prevented by rapid blanching to deactivate the oxidase enzyme. The resulting tea is light-bodied, slightly herbal, fresh and vegetal tasting, and features yellowish, greenish or golden tones.<br />\r\n<br />\r\nProperties of Green Tea:</p>\r\n\r\n<ul>\r\n\t<li>Fights the effect of free radicals</li>\r\n\t<li>Prevents aging</li>\r\n\t<li>Improves the appearance of the skin</li>\r\n\t<li>Strengthens hair and nails</li>\r\n\t<li>Prevents cardiovascular diseases</li>\r\n\t<li>Promotes fat burning</li>\r\n\t<li>Improves brain function</li>\r\n\t<li>Stimulates the diuretic effect</li>\r\n\t<li>Regulates blood pressure</li>\r\n</ul>"
+    }
+  },
+  {
+    "model": "shop.bankprops",
+    "pk": 1,
+    "fields": {
+      "bank_name": "Optima",
+      "account_number": "312309128409124",
+      "cardholder_name": "Sergei Shinn"
+    }
+  },
+  {
+    "model": "shop.shoppolicy",
+    "pk": 1,
+    "fields": {
+      "term_of_service": "<p>These Terms and Conditions of Use (the &ldquo;Terms of Use&rdquo;) apply to Leaf Shop site located at www.leafshop.kg, and all associated sites linked to www.leafshop.online, its subsidiaries and affiliates. BY USING THE SITE, YOU AGREE TO THESE TERMS OF USE; IF YOU DO NOT AGREE, DO NOT USE THE SITE.<br />\r\n<br />\r\nLeaf Shop reserves the right, at its sole discretion, to change, modify, add or remove portions of these Terms of Use, at any time. It is your responsibility to check these Terms of Use periodically for changes. Your continued use of the Site following the posting of changes will mean that you accept and agree to the changes. As long as you comply with these Terms of Use, Leaf Shop grants you a personal, non-exclusive, non-transferable, limited privilege to enter and use the Site.</p>",
+      "shipping_policy": "<p>Shipping costs will vary between 100-150 thb, depending on your address and order quantity, and you will have to pay cash on delivery for it.<br />\r\n<br />\r\nAll orders will be shipped within 24 hours.<br />\r\n<br />\r\nIf the payment has been made before 10.00AM, your order will be ship on that day during our business hours. If the payment is paid after 10.00AM, your order will be shipped on the next day.<br />\r\n<br />\r\n&nbsp;</p>",
+      "return_policy": "<p>If the product&#39;s packaging got damaged during the transportaion but the item doesn&#39;t get damaged directly, we won&#39;t take responsibilty for it. However, you can contact the shipping company and claim for the fee.<br />\r\n<br />\r\nIn case if you received item that not as described as in the site. We will take responsibility and provide a return. The return process might take up to 72 hrs.<br />\r\n<br />\r\nWe have a 14 days return policy.<br />\r\n<br />\r\nYou may not return consumable products that has been opened already.<br />\r\n<br />\r\nPlease contact our Customer Service Team at Telegram: @domodom to intitate a return request. Please provide as much information as possible, including Order Number, Full Name, Address, Phone number, reason for the return.</p>",
+      "privacy_policy": "<ul>\r\n\t<li>What information do we collect?</li>\r\n</ul>\r\n\r\n<p><br />\r\nWe collect information from you when you enter the site and place an order.<br />\r\n<br />\r\nWhen ordering, we may ask you for your name, e-mail address, mailing address, phone number, or other information. You may, however, visit our site anonymously.<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>How do we use your information?</li>\r\n</ul>\r\n\r\n<p><br />\r\nWe may use the information we collect from you when you register, purchase products, enter a contest or promotion, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways:<br />\r\n<br />\r\nTo personalize your site experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br />\r\n<br />\r\nTo allow us to better service you in responding to your customer service requests.<br />\r\n<br />\r\nTo quickly process your transactions.<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>How do we protect visitor information?</li>\r\n</ul>\r\n\r\n<p><br />\r\nWe implement a variety of security measures to maintain the safety of your personal information. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. When you place orders or access your personal information, we offer the use of a secure server. All sensitive/credit information you supply is transmitted via Secure Socket Layer (SSL) technology and then encrypted into our databases to be only accessed as stated above.<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>Do we use &quot;cookies&quot;?</li>\r\n</ul>\r\n\r\n<p><br />\r\nYes. Cookies are small files that a site or its service provider transfers to your computer&#39;s hard drive through your Web browser (if you allow) that enables the site&#39;s or service provider&#39;s systems to recognize your browser and capture and remember certain information. For instance, we use cookies to help us remember and process the items in your shopping cart. They are also used to help us understand your preferences based on previous or current site activity, which enables us to provide you with improved services. We also use cookies to help us compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future.<br />\r\n<br />\r\nYou can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser (like Netscape Navigator or Internet Explorer) settings. Each browser is a little different, so look at your browser Help menu to learn the correct way to modify your cookies. If you turn cookies off, you won&#39;t have access to many features that make your site experience more efficient and some of our services will not function properly. However, you can still place orders over the telephone by contacting customer service.<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>Do we disclose the information we collect to outside parties?</li>\r\n</ul>\r\n\r\n<p><br />\r\nWe do not sell, trade, or otherwise transfer to outside parties your personally identifiable information unless we provide you with advance notice, except as described below. The term &quot;outside parties&quot; does not include THAI VAPE SHOP. It also does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others&#39; rights, property, or safety.<br />\r\n<br />\r\nHowever, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>Changes to our policy</li>\r\n</ul>\r\n\r\n<p><br />\r\nIf we decide to change our privacy policy, we will post those changes on this page. Policy changes will apply only to information collected after the date of the change. This policy was last modified on August 6, 2013.<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>Questions and feedback</li>\r\n</ul>\r\n\r\n<p><br />\r\nWe welcome your questions, comments, and concerns about privacy. Please send us any and all feedback pertaining to privacy, or any other issue.<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>Online Policy Only</li>\r\n</ul>\r\n\r\n<p><br />\r\nThis online privacy policy applies only to information collected through our website and not to information collected offline.Terms and ConditionsPlease also visit our Terms and Conditions section establishing the use, disclaimers, and limitations of liability governing the use of our website.<br />\r\n&nbsp;</p>\r\n\r\n<ul>\r\n\t<li>Your consent</li>\r\n</ul>\r\n\r\n<p><br />\r\nBy using our site, you consent to our privacy policy. THAI VAPE SHOP reserves the right to refuse service to anyone.</p>"
+    }
+  }
+]

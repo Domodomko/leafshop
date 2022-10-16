@@ -18,7 +18,4 @@ urlpatterns = [
     path('order-information', views.OrderShippingView.as_view(), name='order_information'),
     path('order-payment', views.OrderPaymentView.as_view(), name='order_payment'),
     path('order-confirmation/<order_id>/', views.order_confirmation, name='order_confirmation'),
-
-    # Search
-    path('googlebd43c182fd3d8564.html', views.google),
 ]

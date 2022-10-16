@@ -18,7 +18,7 @@ class ProductToCartInline(admin.StackedInline):
 
 
 @admin.register(Category)
-class CategoryAdmin(TranslationAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     model = Category
     list_display = ('id', 'name')
     list_display_links = ('id', 'name')
@@ -33,7 +33,7 @@ class CategoryAdmin(TranslationAdmin):
 
 
 @admin.register(Product)
-class ProductAdmin(TranslationAdmin):
+class ProductAdmin(admin.ModelAdmin):
     model = Product
     list_display = ('id', 'name', 'category')
     list_display_links = ('id', 'name', 'category')
@@ -147,7 +147,7 @@ class OrderAdmin(admin.ModelAdmin):
 
 
 @admin.register(AboutTeaContent)
-class AboutTeaContentAdmin(TranslationAdmin):
+class AboutTeaContentAdmin(admin.ModelAdmin):
     model = AboutTeaContent
     list_display = ('id',)
     list_display_links = ('id',)
@@ -161,7 +161,7 @@ class BankPropsAdmin(admin.ModelAdmin):
 
 
 @admin.register(ShopPolicy)
-class ShopPolicyAdmin(TranslationAdmin):
+class ShopPolicyAdmin(admin.ModelAdmin):
     model = ShopPolicy
     list_display = ('id',)
     list_display_links = ('id',)
