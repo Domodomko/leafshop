@@ -20,6 +20,9 @@ class Category(models.Model):
     def __str__(self):
         return f'{self.name}'
 
+    class Meta:
+        verbose_name_plural = 'Categories'
+
 
 class Product(models.Model):
     name = models.CharField('Name', max_length=100, default='')
@@ -93,11 +96,17 @@ class AboutTeaContent(models.Model):
     black_tea = RichTextField(max_length=500000, null=True, default='')
     green_tea = RichTextField(max_length=500000, null=True, default='')
 
+    class Meta:
+        verbose_name_plural = 'About Tea Content'
+
 
 class BankProps(models.Model):
     bank_name = models.CharField(max_length=500, null=True, default='')
     account_number = models.CharField(max_length=500, null=True, default='')
     cardholder_name = models.CharField(max_length=500, null=True, default='')
+
+    class Meta:
+        verbose_name_plural = 'Bank Props'
 
 
 class ShopPolicy(models.Model):
@@ -105,3 +114,6 @@ class ShopPolicy(models.Model):
     shipping_policy = RichTextField(max_length=500000, null=True, default='')
     return_policy = RichTextField(max_length=500000, null=True, default='')
     privacy_policy = RichTextField(max_length=500000, null=True, default='')
+
+    class Meta:
+        verbose_name_plural = 'Shop Policy'

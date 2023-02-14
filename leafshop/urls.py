@@ -19,6 +19,6 @@ urlpatterns += i18n_patterns(
     prefix_default_language=False
 )
 
-admin.site.site_header = "Администрирование LeafShop"
-admin.site.site_title = "Администрирование LeafShop"
-admin.site.index_title = "Добро пожаловать на панель админитрирования LeafShop"
+admin.site.site_header = "LeafShop Admin"
+admin.site.site_title = "LeafShop Admin"
+admin.site.index_title = "Welcome to LeafShop admin panel"
